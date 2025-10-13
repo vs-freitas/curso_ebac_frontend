@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação em</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Validação do Exercício</h1>
+        <h5>(B deve ser maior que A)</h5>
+        <form id="form-validacao">
+            <label for="numeroA">Número A:</label>
+            <input type="number" id="numeroA" required placeholder="Insira o número A" />
+            <label for="numeroB">Número B:</label>
+            <input type="number" id="numeroB" required placeholder="Insira o número B" />
+            <button id="btn-validar" type="submit">Validar Comparação</button>
+        </form>
+        <p class="success-message"></p>
+        <p class="error-message"></p>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
