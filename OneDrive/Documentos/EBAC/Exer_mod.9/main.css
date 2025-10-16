@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding-top: 40px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#formulario-tarefa {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#nome-tarefa {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; 
+    flex-grow: 1; /* Permite que o input cresça */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0; 
+    cursor: pointer;
+}
+
+#lista-tarefas {
+    list-style: disc; /* Usando bolinha padrão para imitar a imagem */
+    padding-left: 20px;
+}
+
+#lista-tarefas li {
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* 3) Classe para riscar o texto */
+.riscado {
+    text-decoration: line-through;
+    color: #888;
+}
