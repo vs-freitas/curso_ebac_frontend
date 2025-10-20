@@ -1,0 +1,312 @@
+/* ======================================================= */
+/* ESTILOS BASE (MOBILE FIRST: ATÉ 640PX) - PERSONALIZADO */
+/* ======================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif; 
+}
+
+/* Paleta de Cores */
+:root {
+    --cor-primaria: #1F2730; /* Preto bem escuro */
+    --cor-secundaria: #394451; /* Cinza para caixas */
+    --cor-destaque: #FF6767; /* Coral Suave */
+    --cor-clara: #F5F5F5; /* Fundo principal */
+    --cor-fundo-secao: #FFFFFF; /* Fundo de seção */
+    --cor-copyright-bar: #A30000; /* Vermelho/Vinho Sólido */
+}
+
+body {
+    background-color: var(--cor-clara);
+    color: var(--cor-primaria);
+    overflow-x: hidden;
+    line-height: 1.7; 
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5em; 
+    font-weight: 700;
+    text-transform: uppercase; 
+    color: var(--cor-primaria);
+    margin-bottom: 40px; 
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; 
+    height: 4px;
+    background-color: var(--cor-destaque);
+}
+
+/* HEADER - Fixo e Compacto */
+#header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    padding: 15px 0;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#header .container {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    align-items: center;
+}
+
+#header h1 {
+    font-size: 1.6em;
+}
+
+#header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+#header nav a {
+    color: var(--cor-clara);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#header nav a:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-destaque);
+}
+
+/* SEÇÃO SOBRE A LOJA (MOBILE) */
+#sobre-loja {
+    background-color: var(--cor-fundo-secao);
+    padding: 60px 0;
+}
+
+#sobre-loja .container {
+    display: flex;
+    flex-direction: column; 
+    gap: 40px;
+}
+
+#sobre-loja .imagem-loja img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* SEÇÃO PRODUTOS (MOBILE: 1 coluna) */
+#produtos {
+    background-color: var(--cor-clara);
+    padding: 60px 0;
+}
+
+#produtos .lista-produtos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* Card de Produto */
+.produto {
+    background-color: var(--cor-fundo-secao);
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); 
+    transition: all 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.produto img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.produto h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+    font-size: 1.4em;
+}
+
+.produto button {
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 80%; 
+    transition: background-color 0.3s;
+}
+
+.produto button:hover {
+    background-color: #e65c5c;
+}
+
+
+/* ======================================================= */
+/* FOOTER - ESTILOS MISTOS (CONTATO & COPYRIGHT) */
+/* ======================================================= */
+
+/* 1. Área de Contato/Localização */
+#contato-footer {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-clara);
+    padding: 40px 0 0 0; 
+    font-size: 0.9em;
+}
+
+#contato-footer h4 {
+    color: var(--cor-destaque);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#contato-footer a {
+    color: var(--cor-clara);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contato-footer a:hover {
+    color: var(--cor-destaque);
+}
+
+.footer-grid {
+    display: flex;
+    flex-direction: column; /* MOBILE: Empilhado */
+    text-align: center;
+    gap: 30px;
+    padding-bottom: 20px; 
+}
+
+/* 2. BARRA SÓLIDA DE COPYRIGHT (O visual que você queria) */
+.copyright-bar {
+    background-color: var(--cor-copyright-bar); 
+    color: white;
+    padding: 15px 0; 
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+
+/* ======================================================= */
+/* MEDIA QUERY: LAYOUT TABLET (641px até 1023px) */
+/* ======================================================= */
+@media (min-width: 641px) and (max-width: 1023px) {
+    /* HEADER: Navegação Lado a Lado */
+    #header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* SOBRE A LOJA: Empilhada */
+    #sobre-loja .container {
+        flex-direction: column; 
+    }
+    
+    /* PRODUTOS: 2 Colunas */
+    #produtos .lista-produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    /* FOOTER TABLET: 2 colunas */
+    .footer-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: left;
+    }
+    
+    .footer-info, .footer-address {
+        width: 45%; 
+    }
+}
+
+
+/* ======================================================= */
+/* MEDIA QUERY: LAYOUT DESKTOP (A PARTIR DE 1024px) */
+/* ======================================================= */
+@media (min-width: 1024px) {
+    
+    /* Títulos alinhados à esquerda */
+    h2 {
+        text-align: left;
+    }
+    h2::after {
+        left: 0;
+        transform: none;
+    }
+    
+    /* HEADER: Lado a Lado */
+    #header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* SOBRE A LOJA: 2 COLUNAS */
+    #sobre-loja .container {
+        flex-direction: row; 
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    #sobre-loja .imagem-loja {
+        width: 40%;
+    }
+
+    #sobre-loja .descricao-loja {
+        width: 55%;
+    }
+
+    /* PRODUTOS: 4 COLUNAS */
+    #produtos .lista-produtos-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    /* FOOTER DESKTOP: 2 Colunas */
+    .footer-grid {
+        flex-direction: row;
+        justify-content: flex-start; 
+        gap: 80px;
+        text-align: left;
+        
+    }
+    
+    .footer-address {
+        margin-left: 80px; 
+    }
+}
